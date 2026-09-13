@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beside human eye — Edoardo Bartoccini</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<header>
+    <div class="logo-wrap">
+        <span class="home-mark" onclick="goToHome()" aria-label="Go to homepage" title="Home">⌂</span>
+        <div class="logo" onclick="goToHome()">Edoardo Bartoccini <em>Havoc</em></div>
+    </div>
+    <nav>
+        <a onclick="goToProjects()">Projects</a>
+        <a onclick="goToAbout()">About</a>
+        <a onclick="goToContact()">Contact</a>
+    </nav>
+</header>
+<main>
+    <section id="beside-human-eye" class="section active">
+        <h2 class="section-title">beside human eye</h2>
+        <div class="slider-wrap">
+            <button class="arrow left" type="button" aria-label="Previous image" onclick="scrollSlider('beside-human-eye-slider', -1)">‹</button>
+            <div class="slider" id="beside-human-eye-slider">
+                <div class="slide"><img src="../img/placeholder.svg" alt="beside human eye 1" onerror="this.onerror=null;this.src='../img/placeholder.svg';"><div class="caption">beside human eye 1</div></div>
+                <div class="slide"><img src="../img/placeholder.svg" alt="beside human eye 2" onerror="this.onerror=null;this.src='../img/placeholder.svg';"><div class="caption">beside human eye 2</div></div>
+            </div>
+            <button class="arrow right" type="button" aria-label="Next image" onclick="scrollSlider('beside-human-eye-slider', 1)">›</button>
+        </div>
+    </section>
+</main>
+<footer>© 2026 Edoardo Bartoccini</footer>
+<script src="../javascript/main.js"></script>
+</body>
+</html>
