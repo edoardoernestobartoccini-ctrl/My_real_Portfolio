@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the moments — Edoardo Bartoccini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 <header>
     <div class="logo-wrap">
-        <span class="home-mark" onclick="goToHome()" aria-label="Go to homepage" title="Home">⌂</span>
-        <div class="logo" onclick="goToHome()">Edoardo Bartoccini <em>Havoc</em></div>
+        <a class="home-mark" href="../../index.html" aria-label="Go to homepage" title="Home">⌂</a>
+        <a class="logo" href="../../index.html">Edoardo Bartoccini <em>Havoc</em></a>
     </div>
     <nav>
-        <a onclick="goToProjects()">Projects</a>
-        <a onclick="goToAbout()">About</a>
-        <a onclick="goToContact()">Contact</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contact</a>
     </nav>
 </header>
 <main>
@@ -25,19 +28,19 @@
             <button class="arrow left" type="button" aria-label="Previous image" onclick="scrollSlider('the-moments-slider', -1)">‹</button>
             <div class="slider" id="the-moments-slider">
                 <div class="slide">
-                    <img src="../img/the_moments/_DSC4236.JPG" alt="the moments 1">
+                    <img src="../img/the_moments/_DSC4236.JPG" alt="the moments 1" loading="eager" fetchpriority="high">
                     <div class="caption">A quiet gesture, held in the light of the moment.</div>
                 </div>
                 <div class="slide">
-                    <img src="../img/the_moments/_DSC4321.JPG" alt="the moments 2">
+                    <img src="../img/the_moments/_DSC4321.JPG" alt="the moments 2" loading="eager" fetchpriority="high">
                     <div class="caption">Stillness and movement coexisting in a single frame.</div>
                 </div>
                 <div class="slide">
-                    <img src="../img/the_moments/_DSC4325.JPG" alt="the moments 3">
+                    <img src="../img/the_moments/_DSC4325.JPG" alt="the moments 3" loading="eager" fetchpriority="high">
                     <div class="caption">Fragments of everyday life, seen with patience and attention.</div>
                 </div>
                 <div class="slide">
-                    <img src="../img/the_moments/_DSC4330.JPG" alt="the moments 4">
+                    <img src="../img/the_moments/_DSC4330.JPG" alt="the moments 4" loading="eager" fetchpriority="high">
                     <div class="caption">A suspended instant that speaks more than a thousand words.</div>
                 </div>
             </div>
