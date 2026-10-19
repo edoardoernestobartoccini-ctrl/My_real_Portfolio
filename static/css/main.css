@@ -175,6 +175,36 @@ header {
             text-align: center
         }
 
+        .back-to-projects {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 44px;
+            margin-bottom: 14px;
+            padding: 10px 14px;
+            color: #6b655e;
+            font-size: 12px;
+            letter-spacing: .5px;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        .back-to-projects span {
+            font-size: 17px;
+            line-height: 1;
+            transition: transform .2s ease;
+        }
+
+        .back-to-projects:hover,
+        .back-to-projects:focus-visible {
+            color: #2a2724;
+        }
+
+        .back-to-projects:hover span,
+        .back-to-projects:focus-visible span {
+            transform: translateX(-3px);
+        }
+
         .project-list {
             max-width: 400px;
             margin: 0 auto
