@@ -141,6 +141,30 @@ header {
             text-transform: uppercase
         }
 
+        .home .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 38px auto 0;
+            padding: 11px 24px;
+            border: 1px solid #2a2724;
+            border-radius: 5px;
+            color: #fff;
+            background: #2a2724;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+        }
+
+        .home .portfolio-link:hover,
+        .home .portfolio-link:focus-visible {
+            color: #2a2724;
+            background: transparent;
+            border-color: #2a2724;
+        }
+
         .section-title {
             font-size: 11px;
             font-weight: 500;
@@ -433,6 +457,13 @@ header {
 
             .home .phrase {
                 font-size: 17px
+            }
+
+            .home .portfolio-link {
+                margin-top: 30px;
+                padding: 12px 22px;
+                font-size: 11px;
+                letter-spacing: 1px;
             }
 
             .project-item {
