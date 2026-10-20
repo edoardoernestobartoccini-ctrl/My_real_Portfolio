@@ -38,19 +38,28 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
+    gap: 6px;
+    min-width: 36px;
     height: 36px;
-    font-size: 22px;
+    padding: 0 10px;
+    font-size: 13px;
     color: #2a2724;
     opacity: .85;
     cursor: pointer;
     transition: opacity .2s ease;
     line-height: 1;
+    letter-spacing: .5px;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
 .home-mark:hover {
     opacity: 1;
+}
+
+.home-mark:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
 }
 
 .logo {
