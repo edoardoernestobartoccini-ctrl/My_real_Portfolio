@@ -162,10 +162,8 @@ header {
         }
 
         .home {
-            position: relative;
             text-align: center;
-            padding: 20px 0 90px;
-            min-height: calc(100vh - 180px);
+            padding: 20px 0 30px
         }
 
         .home .big {
@@ -187,12 +185,7 @@ header {
         }
 
         .home .bottom {
-            position: absolute;
-            top: 24px;
-            right: 0;
-            bottom: auto;
-            margin-top: 0;
-            text-align: right;
+            margin-top: 70px
         }
 
         .home .name {
@@ -200,14 +193,11 @@ header {
             letter-spacing: 3px;
             text-transform: uppercase;
             opacity: .55;
-            margin-bottom: 6px;
+            margin-bottom: 6px
         }
 
         .home .name em {
-            font-style: normal;
-            letter-spacing: 2px;
-            margin-left: 8px;
-            font-weight: 600;
+            display: none;
         }
 
         .home .sub {
@@ -242,7 +232,7 @@ header {
         }
 
         .home-actions {
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             gap: 10px;
@@ -723,6 +713,20 @@ header {
                 min-height: calc(100vh - 150px);
             }
 
+            .section.active.home {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .home .big {
+                order: 1;
+            }
+
+            .home .phrase {
+                order: 2;
+            }
+
             .home .phrase {
                 font-size: 18px;
                 margin-bottom: 36px;
@@ -733,6 +737,15 @@ header {
                 position: static;
                 margin-top: 28px;
                 text-align: center;
+                order: 5;
+            }
+
+            .home .name em {
+                display: inline;
+                font-style: normal;
+                letter-spacing: 2px;
+                margin-left: 8px;
+                font-weight: 600;
             }
 
             .home .name {
@@ -751,10 +764,13 @@ header {
                 padding: 12px 22px;
                 font-size: 12px;
                 letter-spacing: 1px;
+                order: 3;
             }
 
             .home-actions {
+                display: flex;
                 margin-top: 14px;
+                order: 4;
             }
 
             .home-secondary-link {
