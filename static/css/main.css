@@ -264,30 +264,52 @@ header {
         }
 
         .project-list {
-            max-width: 400px;
-            margin: 0 auto
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+            gap: 16px;
         }
 
         .project-item {
-            display: block;
-            text-align: center;
+            display: flex;
+            min-height: 150px;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 22px;
+            border: 1px solid #bfb6aa;
+            background: rgba(255, 255, 255, .12);
             font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
+            font-size: 25px;
             color: #2a2724;
-            padding: 20px 0;
-            border-bottom: 1px solid #c4bbb0;
             cursor: pointer;
             text-decoration: none;
-            transition: all .3s
+            transition: background .25s ease, border-color .25s ease, transform .25s ease;
         }
 
         .project-item:hover {
-            opacity: .55;
-            letter-spacing: 1px
+            background: rgba(255, 255, 255, .3);
+            border-color: #8f877d;
+            transform: translateY(-3px);
         }
 
-        .project-item:last-child {
-            border-bottom: none
+        .project-name {
+            line-height: 1.15;
+        }
+
+        .project-arrow {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 16px;
+            transition: transform .25s ease;
+        }
+
+        .project-item:hover .project-arrow,
+        .project-item:focus-visible .project-arrow {
+            transform: translate(3px, -3px);
+        }
+
+        .project-item:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
         }
 
         .project-gallery {
@@ -487,6 +509,11 @@ header {
             text-align: center
         }
 
+        .projects-content {
+            max-width: none;
+            text-align: left;
+        }
+
         .content p {
             font-size: 15px;
             color: #3d3934;
@@ -567,7 +594,9 @@ header {
             }
 
             .project-item {
-                font-size: 20px
+                min-height: 120px;
+                padding: 18px;
+                font-size: 22px;
             }
 
             .arrow {
