@@ -553,44 +553,100 @@ header {
 
         @media(max-width:700px) {
             header {
-                padding: 15px 18px
+                position: sticky;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+                padding: 10px 16px;
+            }
+
+            .logo-wrap {
+                width: 100%;
+                min-width: 0;
+                gap: 8px;
+            }
+
+            .home-mark {
+                flex-shrink: 0;
+                padding: 0 8px;
+                font-size: 11px;
+            }
+
+            .logo {
+                min-width: 0;
+                font-size: 16px;
+                white-space: nowrap;
+            }
+
+            nav {
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 0 12px;
             }
 
             nav a,
             .portfolio-toggle {
-                margin-left: 16px;
+                display: inline-flex;
+                align-items: center;
+                margin: 0;
                 font-size: 12px;
-                min-height: 36px;
+                min-height: 44px;
             }
 
             .portfolio-dropdown {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                flex: 1 1 auto;
             }
 
             .portfolio-menu {
-                padding: 0 0 0 16px;
+                padding: 0 0 4px 8px;
+            }
+
+            .portfolio-menu a {
+                min-height: 44px;
+                padding: 10px 0;
             }
 
             main {
-                padding: 95px 16px 60px
+                padding: 32px 16px 52px;
+            }
+
+            .section-title {
+                margin-bottom: 28px;
             }
 
             .home .big {
                 font-size: 32px;
-                margin-bottom: 40px
+                margin-bottom: 32px;
+            }
+
+            .home {
+                padding: 8px 0 24px;
             }
 
             .home .phrase {
-                font-size: 17px
+                font-size: 17px;
+                margin-bottom: 36px;
+            }
+
+            .home .bottom {
+                margin-top: 44px;
             }
 
             .home .portfolio-link {
-                margin-top: 30px;
+                margin-top: 24px;
                 padding: 12px 22px;
                 font-size: 11px;
                 letter-spacing: 1px;
+            }
+
+            .back-link,
+            .back-to-projects {
+                margin: 0 0 10px -8px;
             }
 
             .project-item {
@@ -599,21 +655,47 @@ header {
                 font-size: 22px;
             }
 
+            .slider {
+                gap: 16px;
+            }
+
+            #the-moments-slider .slide {
+                min-width: 100%;
+                padding: 12px 0;
+                gap: 14px;
+            }
+
+            #the-moments-slider .slide img,
+            .slider .slide img {
+                max-height: 52vh;
+            }
+
+            .slide .caption {
+                font-size: 12px;
+                padding: 0 26px;
+            }
+
             .arrow {
                 width: 28px;
                 height: 28px;
-                font-size: 18px
+                font-size: 18px;
+                top: 42%;
             }
 
             .arrow.left {
-                left: 6px
+                left: 4px;
             }
 
             .arrow.right {
-                right: 6px
+                right: 4px;
             }
 
             .slide {
-                width: 88vw
+                width: calc(100vw - 48px);
+            }
+
+            footer {
+                margin-top: 44px;
+                padding: 32px 18px 28px;
             }
         }
