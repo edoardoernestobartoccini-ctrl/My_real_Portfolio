@@ -162,8 +162,10 @@ header {
         }
 
         .home {
+            position: relative;
             text-align: center;
-            padding: 20px 0 30px
+            padding: 20px 0 90px;
+            min-height: calc(100vh - 180px);
         }
 
         .home .big {
@@ -185,7 +187,12 @@ header {
         }
 
         .home .bottom {
-            margin-top: 70px
+            position: absolute;
+            top: 24px;
+            right: 0;
+            bottom: auto;
+            margin-top: 0;
+            text-align: right;
         }
 
         .home .name {
@@ -193,7 +200,14 @@ header {
             letter-spacing: 3px;
             text-transform: uppercase;
             opacity: .55;
-            margin-bottom: 6px
+            margin-bottom: 6px;
+        }
+
+        .home .name em {
+            font-style: normal;
+            letter-spacing: 2px;
+            margin-left: 8px;
+            font-weight: 600;
         }
 
         .home .sub {
@@ -224,6 +238,37 @@ header {
         .home .portfolio-link:focus-visible {
             color: #2a2724;
             background: transparent;
+            border-color: #2a2724;
+        }
+
+        .home-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .home-secondary-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 110px;
+            padding: 8px 18px;
+            border: 1px solid rgba(42, 39, 36, .35);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            color: #2a2724;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            transition: background .2s ease, border-color .2s ease, opacity .2s ease;
+        }
+
+        .home-secondary-link:hover,
+        .home-secondary-link:focus-visible {
+            background: rgba(255, 255, 255, .18);
             border-color: #2a2724;
         }
 
@@ -583,7 +628,8 @@ header {
             .logo-wrap {
                 width: 100%;
                 min-width: 0;
-                gap: 8px;
+                gap: 0;
+                justify-content: flex-end;
             }
 
             .home-mark {
@@ -591,12 +637,27 @@ header {
                 padding: 0 8px;
                 font-size: 12px;
                 opacity: .95;
+                position: relative;
+                padding-right: 10px;
+            }
+
+            .home-mark::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 1px;
+                height: 18px;
+                background: rgba(42, 39, 36, 0.35);
+                transform: translateY(-50%);
             }
 
             .logo {
                 min-width: 0;
+                margin-left: 10px;
                 font-size: 17px;
                 white-space: nowrap;
+                text-align: right;
             }
 
             nav {
@@ -658,7 +719,8 @@ header {
             }
 
             .home {
-                padding: 8px 0 24px;
+                padding: 8px 0 88px;
+                min-height: calc(100vh - 150px);
             }
 
             .home .phrase {
@@ -668,16 +730,19 @@ header {
             }
 
             .home .bottom {
-                margin-top: 44px;
+                position: static;
+                margin-top: 28px;
+                text-align: center;
             }
 
             .home .name {
-                font-size: 14px;
+                font-size: 12px;
                 opacity: .75;
+                letter-spacing: 2px;
             }
 
             .home .sub {
-                font-size: 13px;
+                font-size: 11px;
                 color: #4f4a45;
             }
 
@@ -686,6 +751,18 @@ header {
                 padding: 12px 22px;
                 font-size: 12px;
                 letter-spacing: 1px;
+            }
+
+            .home-actions {
+                margin-top: 14px;
+            }
+
+            .home-secondary-link {
+                min-width: 0;
+                width: min(180px, 76vw);
+                padding: 9px 14px;
+                font-size: 10px;
+                letter-spacing: 1.2px;
             }
 
             .back-link,
