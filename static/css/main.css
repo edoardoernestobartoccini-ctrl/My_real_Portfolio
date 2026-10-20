@@ -579,12 +579,13 @@ header {
             .home-mark {
                 flex-shrink: 0;
                 padding: 0 8px;
-                font-size: 11px;
+                font-size: 12px;
+                opacity: .95;
             }
 
             .logo {
                 min-width: 0;
-                font-size: 16px;
+                font-size: 17px;
                 white-space: nowrap;
             }
 
@@ -601,8 +602,9 @@ header {
                 display: inline-flex;
                 align-items: center;
                 margin: 0;
-                font-size: 12px;
+                font-size: 13px;
                 min-height: 44px;
+                opacity: .75;
             }
 
             .portfolio-dropdown {
@@ -636,10 +638,12 @@ header {
 
             .section-title {
                 margin-bottom: 28px;
+                font-size: 12px;
+                color: #5e5953;
             }
 
             .home .big {
-                font-size: 32px;
+                font-size: 34px;
                 margin-bottom: 32px;
             }
 
@@ -648,24 +652,49 @@ header {
             }
 
             .home .phrase {
-                font-size: 17px;
+                font-size: 18px;
                 margin-bottom: 36px;
+                opacity: 1;
             }
 
             .home .bottom {
                 margin-top: 44px;
             }
 
+            .home .name {
+                font-size: 14px;
+                opacity: .75;
+            }
+
+            .home .sub {
+                font-size: 13px;
+                color: #4f4a45;
+            }
+
             .home .portfolio-link {
                 margin-top: 24px;
                 padding: 12px 22px;
-                font-size: 11px;
+                font-size: 12px;
                 letter-spacing: 1px;
             }
 
             .back-link,
             .back-to-projects {
-                margin: 0 0 10px -8px;
+                min-height: 48px;
+                margin: 0 0 10px;
+                padding: 8px 12px;
+                gap: 10px;
+                border: 1px solid #b5ada2;
+                border-radius: 4px;
+                background: rgba(255, 255, 255, .16);
+                font-size: 13px;
+                color: #3d3934;
+            }
+
+            .back-link span,
+            .back-to-projects span {
+                font-size: 22px;
+                font-weight: 500;
             }
 
             .project-item {
@@ -690,7 +719,8 @@ header {
             }
 
             .slide .caption {
-                font-size: 12px;
+                font-size: 13px;
+                color: #4f4a45;
                 padding: 0 26px;
             }
 
@@ -716,5 +746,7 @@ header {
             footer {
                 margin-top: 44px;
                 padding: 32px 18px 28px;
+                font-size: 13px;
+                color: #625c55;
             }
         }
