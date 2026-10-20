@@ -78,7 +78,16 @@ header {
     margin-left: 4px;
 }
 
-        nav a {
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px 0;
+        }
+
+        nav a,
+        .portfolio-toggle {
             color: #2a2724;
             text-decoration: none;
             font-size: 13px;
@@ -87,11 +96,45 @@ header {
             letter-spacing: .8px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: opacity .3s
+            transition: opacity .3s;
+            font-family: inherit;
         }
 
-        nav a:hover {
+        nav a:hover,
+        .portfolio-toggle:hover {
             opacity: 1
+        }
+
+        .portfolio-dropdown {
+            min-width: 0;
+        }
+
+        .portfolio-toggle {
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+
+        .portfolio-toggle:focus-visible,
+        nav a:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 4px;
+        }
+
+        .portfolio-menu {
+            list-style: none;
+            padding: 6px 0 0;
+        }
+
+        .portfolio-menu a {
+            display: inline-block;
+            margin: 0;
+            padding: 8px 0;
+            transition: opacity .2s ease, transform .2s ease;
+        }
+
+        .portfolio-menu a:hover {
+            transform: translateX(3px);
         }
 
         main {
@@ -480,9 +523,21 @@ header {
                 padding: 15px 18px
             }
 
-            nav a {
+            nav a,
+            .portfolio-toggle {
                 margin-left: 16px;
-                font-size: 12px
+                font-size: 12px;
+                min-height: 36px;
+            }
+
+            .portfolio-dropdown {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .portfolio-menu {
+                padding: 0 0 0 16px;
             }
 
             main {

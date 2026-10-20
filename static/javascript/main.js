@@ -19,6 +19,35 @@ function goToProject(project) {
   window.location.href = project + ".html";
 }
 
+function setupPortfolioDropdown(dropdown) {
+  const toggle = dropdown.querySelector('.portfolio-toggle');
+  const menu = dropdown.querySelector('.portfolio-menu');
+  if (!toggle || !menu) return;
+
+  function closeMenu(returnFocus = false) {
+    toggle.setAttribute('aria-expanded', 'false');
+    menu.hidden = true;
+    if (returnFocus) toggle.focus();
+  }
+
+  toggle.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isExpanded));
+    menu.hidden = isExpanded;
+  });
+
+  dropdown.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !menu.hidden) {
+      event.preventDefault();
+      closeMenu(true);
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target)) closeMenu();
+  });
+}
+
 function scrollSlider(sliderId, direction) {
   const slider = document.getElementById(sliderId);
   if (!slider) return;
@@ -167,6 +196,7 @@ function closeLightbox() {
 
 // attach click handlers to slide images after DOM loads
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.portfolio-dropdown').forEach(setupPortfolioDropdown);
   createLightbox();
   document.querySelectorAll('.slider').forEach(setupLazyGallery);
   document.querySelectorAll('.slide img').forEach((imgElem) => {
