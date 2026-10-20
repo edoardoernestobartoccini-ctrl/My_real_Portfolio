@@ -561,6 +561,16 @@ header {
             letter-spacing: .8px
         }
 
+        @media (min-width:701px) and (max-width:800px) {
+            .arrow.left {
+                left: 8px;
+            }
+
+            .arrow.right {
+                right: 8px;
+            }
+        }
+
         @media(max-width:700px) {
             header {
                 position: sticky;
@@ -680,20 +690,19 @@ header {
 
             .back-link,
             .back-to-projects {
-                min-height: 48px;
-                margin: 0 0 10px;
-                padding: 8px 12px;
-                gap: 10px;
-                border: 1px solid #b5ada2;
-                border-radius: 4px;
-                background: rgba(255, 255, 255, .16);
+                min-height: 44px;
+                margin: 0 0 14px -8px;
+                padding: 4px 8px;
+                gap: 8px;
                 font-size: 13px;
                 color: #3d3934;
             }
 
             .back-link span,
             .back-to-projects span {
-                font-size: 22px;
+                position: relative;
+                top: -1px;
+                font-size: 19px;
                 font-weight: 500;
             }
 
