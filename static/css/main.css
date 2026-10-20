@@ -109,6 +109,16 @@ header {
             min-width: 0;
         }
 
+        nav > .portfolio-dropdown + a {
+            margin-left: 24px;
+            padding-left: 24px;
+            border-left: 1px solid #b5ada2;
+        }
+
+        nav > .portfolio-dropdown + a + a {
+            margin-left: 24px;
+        }
+
         .portfolio-toggle {
             padding: 0;
             border: 0;
@@ -582,8 +592,8 @@ header {
                 width: 100%;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                justify-content: space-between;
-                gap: 0 12px;
+                justify-content: flex-start;
+                gap: 0 14px;
             }
 
             nav a,
@@ -599,7 +609,16 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                flex: 1 1 auto;
+                flex: 0 0 auto;
+            }
+
+            nav > .portfolio-dropdown + a {
+                margin-left: 0;
+                padding-left: 14px;
+            }
+
+            nav > .portfolio-dropdown + a + a {
+                margin-left: 0;
             }
 
             .portfolio-menu {
