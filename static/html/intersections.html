@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unposed — Edoardo Bartoccini</title>
+    <title>Intersections — Edoardo Bartoccini</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -23,7 +23,10 @@
                     <ul><li><a href="liminalis.html">Liminalis</a></li></ul>
                 </li>
                 <li><a href="personal-work.html">Personal Work</a>
-                    <ul><li><a href="the-moments.html">The Moments</a></li></ul>
+                    <ul>
+                        <li><a href="the-moments.html">The Moments</a></li>
+                        <li><a href="intersections.html">Intersections</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -32,15 +35,30 @@
     </nav>
 </header>
 <main>
-    <section id="new-project" class="section active">
+    <section id="intersections" class="section active">
         <a class="back-to-projects" href="personal-work.html"><span aria-hidden="true">←</span> Back to Personal Work</a>
-        <h2 class="section-title">Unposed</h2>
+        <h2 class="section-title">Intersections</h2>
         <div class="slider-wrap">
-            <div class="slider" id="new-project-slider">
+            <button class="arrow left" type="button" aria-label="Previous image" onclick="scrollSlider('intersections-slider', -1)">‹</button>
+            <div class="slider" id="intersections-slider">
                 <div class="slide">
-                    <p class="category-coming-soon">Photos coming soon</p>
+                    <img data-src="../img/Intersections/_DSC4136.JPG" alt="A quiet alley runs between the city's weathered facades.">
+                    <div class="caption">A quiet alley runs between the city's weathered facades.</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/Intersections/_DSC4139.JPG" alt="Pub signs crowd a neighborhood street.">
+                    <div class="caption">Pub signs crowd a neighborhood street.</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/Intersections/_DSC4178.JPG" alt="A passerby meets the gaze of a weathered street sculpture.">
+                    <div class="caption">A passerby meets the gaze of a weathered street sculpture.</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/Intersections/_DSC4255.JPG" alt="Two passersby cross paths in a narrow brick street.">
+                    <div class="caption">Two passersby cross paths in a narrow brick street.</div>
                 </div>
             </div>
+            <button class="arrow right" type="button" aria-label="Next image" onclick="scrollSlider('intersections-slider', 1)">›</button>
         </div>
     </section>
 </main>

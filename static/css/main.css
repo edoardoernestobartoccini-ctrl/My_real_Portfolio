@@ -493,14 +493,16 @@ header {
                     justify-content: center;
                 }
 
-                /* Moments gallery: show one image at a time and keep it vertically bounded */
-                #the-moments-slider {
+                /* Show one image at a time in these galleries and keep it vertically bounded. */
+                #the-moments-slider,
+                #intersections-slider {
                     gap: 0;
                     padding-bottom: 16px;
                     overflow: hidden;
                 }
 
-                #the-moments-slider .slide {
+                #the-moments-slider .slide,
+                #intersections-slider .slide {
                     flex: 0 0 100%;
                     width: 100%;
                     min-width: 100%;
@@ -936,13 +938,15 @@ header {
                 gap: 16px;
             }
 
-            #the-moments-slider .slide {
+            #the-moments-slider .slide,
+            #intersections-slider .slide {
                 min-width: 100%;
                 padding: 12px 0;
                 gap: 14px;
             }
 
             #the-moments-slider .slide img,
+            #intersections-slider .slide img,
             .slider .slide img {
                 max-height: 52vh;
             }
