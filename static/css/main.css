@@ -355,13 +355,14 @@ header {
 
         .project-item {
             display: flex;
-            min-height: 0;
+            min-height: 190px;
             flex-direction: column;
-            align-items: stretch;
-            gap: 16px;
-            padding: 0 0 18px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 24px;
             border: 1px solid #bfb6aa;
-            background: rgba(255, 255, 255, .12);
+            background: #cec6bb;
             font-family: 'Cormorant Garamond', serif;
             font-size: 25px;
             color: #2a2724;
@@ -370,23 +371,17 @@ header {
             transition: background .25s ease, border-color .25s ease, transform .25s ease;
         }
 
-        .project-cover {
-            display: block;
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .project-card-label {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 16px;
-            padding: 0 20px;
+        .content p.category-coming-soon,
+        .category-coming-soon {
+            margin: 0;
+            color: #6b655e;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 13px;
+            letter-spacing: .3px;
         }
 
         .project-item:hover {
-            background: rgba(255, 255, 255, .3);
+            background: #d8d0c5;
             border-color: #8f877d;
             transform: translateY(-3px);
         }
@@ -640,23 +635,6 @@ header {
             border-color: #2a2724
         }
 
-        .content .cover-link {
-            display: block;
-            border: 0;
-        }
-
-        .cover-image {
-            display: block;
-            width: 100%;
-            max-height: 60vh;
-            object-fit: cover;
-        }
-
-        .cover-caption {
-            display: block;
-            margin-top: 12px;
-        }
-
         footer {
             text-align: center;
             padding: 50px 28px 40px;
@@ -891,17 +869,9 @@ header {
             }
 
             .project-item {
-                min-height: 0;
-                padding: 0 0 16px;
+                min-height: 160px;
+                padding: 20px;
                 font-size: 22px;
-            }
-
-            .project-cover {
-                height: 180px;
-            }
-
-            .project-card-label {
-                padding: 0 16px;
             }
 
             .slider {
