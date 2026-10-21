@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects — Edoardo Bartoccini</title>
+    <title>Portfolio — Edoardo Bartoccini</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -19,7 +19,12 @@
         <div class="portfolio-dropdown">
             <button class="portfolio-toggle" type="button" aria-expanded="false" aria-controls="portfolio-menu">Portfolio</button>
             <ul class="portfolio-menu" id="portfolio-menu" hidden>
-                <li><a href="projects.html" aria-current="page">All Projects</a></li>
+                <li><a href="reportage.html">Reportage</a>
+                    <ul><li><a href="liminalis.html">Liminalis</a></li></ul>
+                </li>
+                <li><a href="personal-work.html">Personal Work</a>
+                    <ul><li><a href="the-moments.html">The Moments</a></li></ul>
+                </li>
             </ul>
         </div>
         <a href="about.html">About</a>
@@ -28,12 +33,17 @@
 </header>
 <main>
     <section id="projects" class="section active">
-        <h2 class="section-title">All Projects</h2>
+        <h2 class="section-title">Portfolio</h2>
         <div class="content projects-content">
             <div class="project-list">
-                <a class="project-item" href="liminalis.html"><span class="project-name">Liminalis</span><span class="project-arrow" aria-hidden="true">↗</span></a>
-                <a class="project-item" href="the-moments.html"><span class="project-name">The Moments</span><span class="project-arrow" aria-hidden="true">↗</span></a>
-                <a class="project-item" href="reportage.html"><span class="project-name">Reportage</span><span class="project-arrow" aria-hidden="true">↗</span></a>
+                <a class="project-item" href="reportage.html">
+                    <img class="project-cover" src="../img/the_moments/_DSC4321.JPG" alt="A passerby moves through a stark concrete passage." loading="lazy">
+                    <span class="project-card-label"><span class="project-name">Reportage</span><span class="project-arrow" aria-hidden="true">↗</span></span>
+                </a>
+                <a class="project-item" href="personal-work.html">
+                    <img class="project-cover" src="../img/the_moments/_DSC4236.JPG" alt="A motorcycle rests outside a neighborhood shop." loading="lazy">
+                    <span class="project-card-label"><span class="project-name">Personal Work</span><span class="project-arrow" aria-hidden="true">↗</span></span>
+                </a>
             </div>
         </div>
     </section>

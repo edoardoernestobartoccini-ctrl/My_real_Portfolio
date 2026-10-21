@@ -106,6 +106,7 @@ header {
         }
 
         .portfolio-dropdown {
+            position: relative;
             min-width: 0;
         }
 
@@ -132,8 +133,34 @@ header {
         }
 
         .portfolio-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 110;
+            display: none;
+            min-width: 210px;
             list-style: none;
-            padding: 6px 0 0;
+            padding: 8px 14px;
+            background: #d4ccc0;
+            border: 1px solid #c4bbb0;
+            box-shadow: 0 8px 18px rgba(42, 39, 36, .12);
+        }
+
+        .portfolio-menu li {
+            position: relative;
+            list-style: none;
+        }
+
+        .portfolio-menu li > ul {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: none;
+            min-width: 170px;
+            padding: 8px 14px;
+            background: #d4ccc0;
+            border: 1px solid #c4bbb0;
+            box-shadow: 0 8px 18px rgba(42, 39, 36, .12);
         }
 
         .portfolio-menu a {
@@ -145,6 +172,18 @@ header {
 
         .portfolio-menu a:hover {
             transform: translateX(3px);
+        }
+
+        @media (min-width: 701px) {
+            .portfolio-dropdown:hover > .portfolio-menu,
+            .portfolio-dropdown:focus-within > .portfolio-menu {
+                display: block;
+            }
+
+            .portfolio-menu li:hover > ul,
+            .portfolio-menu li:focus-within > ul {
+                display: block;
+            }
         }
 
         main {
@@ -316,11 +355,11 @@ header {
 
         .project-item {
             display: flex;
-            min-height: 150px;
-            align-items: flex-end;
-            justify-content: space-between;
+            min-height: 0;
+            flex-direction: column;
+            align-items: stretch;
             gap: 16px;
-            padding: 22px;
+            padding: 0 0 18px;
             border: 1px solid #bfb6aa;
             background: rgba(255, 255, 255, .12);
             font-family: 'Cormorant Garamond', serif;
@@ -329,6 +368,21 @@ header {
             cursor: pointer;
             text-decoration: none;
             transition: background .25s ease, border-color .25s ease, transform .25s ease;
+        }
+
+        .project-cover {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-card-label {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 0 20px;
         }
 
         .project-item:hover {
@@ -702,7 +756,27 @@ header {
             }
 
             .portfolio-menu {
+                position: static;
+                display: none;
+                min-width: 0;
                 padding: 0 0 4px 8px;
+                border: 0;
+                box-shadow: none;
+                background: transparent;
+            }
+
+            .portfolio-toggle[aria-expanded="true"] + .portfolio-menu {
+                display: block;
+            }
+
+            .portfolio-menu li > ul {
+                position: static;
+                display: block;
+                min-width: 0;
+                padding: 0 0 0 14px;
+                border: 0;
+                box-shadow: none;
+                background: transparent;
             }
 
             .portfolio-menu a {
@@ -817,9 +891,17 @@ header {
             }
 
             .project-item {
-                min-height: 120px;
-                padding: 18px;
+                min-height: 0;
+                padding: 0 0 16px;
                 font-size: 22px;
+            }
+
+            .project-cover {
+                height: 180px;
+            }
+
+            .project-card-label {
+                padding: 0 16px;
             }
 
             .slider {
