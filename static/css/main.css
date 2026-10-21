@@ -382,8 +382,15 @@ header {
         }
 
         .personal-work-content .project-list {
-            max-width: 440px;
-            margin: 0 auto;
+            max-width: none;
+        }
+
+        .projects-content .personal-work-placeholder {
+            background: #cec6bb;
+        }
+
+        .projects-content .personal-work-placeholder:hover {
+            background: #d8d0c5;
         }
 
         .personal-work-cover {
@@ -913,6 +920,11 @@ header {
                 min-height: 0;
                 padding: 0 0 18px;
                 font-size: 22px;
+            }
+
+            .projects-content .personal-work-placeholder {
+                min-height: 160px;
+                padding: 20px;
             }
 
             .projects-content .personal-work-project .project-name,
