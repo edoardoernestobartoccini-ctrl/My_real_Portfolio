@@ -143,6 +143,8 @@ function setupLazyGallery(slider) {
 }
 
 // LIGHTBOX: click an image to view fullscreen in an overlay
+let lightboxTrigger = null;
+
 function createLightbox() {
   if (document.getElementById('site-lightbox')) return;
   const lb = document.createElement('div');
@@ -150,13 +152,21 @@ function createLightbox() {
   lb.className = 'lightbox';
   lb.setAttribute('aria-hidden', 'true');
   lb.innerHTML = `
-    <div class="lightbox-inner" role="dialog" aria-modal="true">
+    <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Image viewer">
       <button class="lightbox-close" aria-label="Close">×</button>
       <img src="" alt="" />
       <div class="lightbox-caption"></div>
     </div>
   `;
   document.body.appendChild(lb);
+
+  const closeButton = lb.querySelector('.lightbox-close');
+  lb.querySelector('.lightbox-inner').addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      closeButton.focus();
+    }
+  });
 
   // Close when clicking outside image or pressing close button
   lb.addEventListener('click', (e) => {
@@ -170,11 +180,12 @@ function createLightbox() {
   });
 }
 
-function openLightbox(src, alt, caption) {
+function openLightbox(src, alt, caption, trigger) {
   createLightbox();
   const lb = document.getElementById('site-lightbox');
   const img = lb.querySelector('img');
   const cap = lb.querySelector('.lightbox-caption');
+  lightboxTrigger = trigger;
   img.src = src;
   img.alt = alt || '';
   cap.textContent = caption || '';
@@ -182,17 +193,20 @@ function openLightbox(src, alt, caption) {
   lb.setAttribute('aria-hidden', 'false');
   // prevent body scroll when lightbox open
   document.body.style.overflow = 'hidden';
+  lb.querySelector('.lightbox-close').focus();
 }
 
 function closeLightbox() {
   const lb = document.getElementById('site-lightbox');
-  if (!lb) return;
+  if (!lb || !lb.classList.contains('active')) return;
   lb.classList.remove('active');
   lb.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
   // remove src to release memory
   const img = lb.querySelector('img');
   if (img) img.src = '';
+  if (lightboxTrigger && lightboxTrigger.isConnected) lightboxTrigger.focus();
+  lightboxTrigger = null;
 }
 
 // attach click handlers to slide images after DOM loads
@@ -202,12 +216,24 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.slider').forEach(setupLazyGallery);
   document.querySelectorAll('.slide img').forEach((imgElem) => {
     imgElem.style.cursor = 'zoom-in';
-    imgElem.addEventListener('click', () => {
+    imgElem.tabIndex = 0;
+    imgElem.setAttribute('role', 'button');
+    imgElem.setAttribute('aria-haspopup', 'dialog');
+
+    const showLightbox = () => {
       // find caption inside the same slide
       const slide = imgElem.closest('.slide');
       const captionElem = slide ? slide.querySelector('.caption') : null;
       const caption = captionElem ? captionElem.textContent.trim() : '';
-      openLightbox(imgElem.src, imgElem.alt, caption);
+      openLightbox(imgElem.src, imgElem.alt, caption, imgElem);
+    };
+
+    imgElem.addEventListener('click', showLightbox);
+    imgElem.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        showLightbox();
+      }
     });
   });
 });

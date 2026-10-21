@@ -568,6 +568,11 @@ header {
                     object-fit: contain;
                 }
 
+        .slide img:focus-visible {
+            outline: 2px solid #2a2724;
+            outline-offset: 4px;
+        }
+
                 /* For other galleries keep a sane maximum height as well */
                 .slider .slide img {
                     max-height: 60vh;
@@ -669,6 +674,11 @@ header {
            cursor: pointer;
            box-shadow: 0 6px 20px rgba(0,0,0,0.35);
                 }
+
+        .lightbox-close:focus-visible {
+           outline: 2px solid #2a2724;
+           outline-offset: 3px;
+        }
 
                 .lightbox-caption {
            color: #dcd6cf;
