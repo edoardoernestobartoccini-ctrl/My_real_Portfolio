@@ -234,11 +234,13 @@ header {
 
         .home .phrase {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 19px;
-            max-width: 460px;
+            font-size: 23px;
+            font-weight: 500;
+            font-style: italic;
+            max-width: 520px;
             margin: 0 auto 50px;
-            line-height: 1.55;
-            opacity: .9
+            line-height: 1.45;
+            opacity: .95
         }
 
         .home .bottom {
