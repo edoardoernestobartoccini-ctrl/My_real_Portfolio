@@ -536,14 +536,16 @@ header {
 
                 /* Show one image at a time in these galleries and keep it vertically bounded. */
                 #the-moments-slider,
-                #intersections-slider {
+                #intersections-slider,
+                #liminalis-slider {
                     gap: 0;
                     padding-bottom: 16px;
                     overflow: hidden;
                 }
 
                 #the-moments-slider .slide,
-                #intersections-slider .slide {
+                #intersections-slider .slide,
+                #liminalis-slider .slide {
                     flex: 0 0 100%;
                     width: 100%;
                     min-width: 100%;
@@ -589,6 +591,15 @@ header {
                     max-width: 760px;
                 }
 
+        #liminalis-slider .photo-meta {
+            margin-top: -12px;
+            padding: 0 8px;
+            color: #817a72;
+            font-size: 11px;
+            line-height: 1.4;
+            text-align: center;
+        }
+
         .arrow {
             position: absolute;
                     top: 50%;
@@ -616,6 +627,10 @@ header {
                     background: rgba(42, 39, 36, .94);
                     color: #d4ccc0;
                     border-color: rgba(42, 39, 36, .94)
+                }
+
+                .arrow[hidden] {
+                    display: none;
                 }
 
                 .arrow.left {
@@ -995,7 +1010,8 @@ header {
             }
 
             #the-moments-slider .slide,
-            #intersections-slider .slide {
+            #intersections-slider .slide,
+            #liminalis-slider .slide {
                 min-width: 100%;
                 padding: 12px 0;
                 gap: 14px;
@@ -1003,6 +1019,7 @@ header {
 
             #the-moments-slider .slide img,
             #intersections-slider .slide img,
+            #liminalis-slider .slide img,
             .slider .slide img {
                 max-height: 52vh;
             }

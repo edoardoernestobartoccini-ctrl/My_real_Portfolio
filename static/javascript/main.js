@@ -79,6 +79,12 @@ function setupLazyGallery(slider) {
   const failed = new Set();
   let activeIndex = 0;
   let scrollTimer;
+  const nextButton = slider.parentElement.querySelector('.arrow.right');
+
+  function updateNextButton() {
+    if (!nextButton) return;
+    nextButton.hidden = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 1;
+  }
 
   function scheduleImages() {
     const wanted = new Set([activeIndex, activeIndex + 1]);
@@ -136,9 +142,12 @@ function setupLazyGallery(slider) {
   }
 
   slider.addEventListener('scroll', () => {
+    updateNextButton();
     window.clearTimeout(scrollTimer);
     scrollTimer = window.setTimeout(updateActiveSlide, 120);
   }, { passive: true });
+  window.addEventListener('resize', updateNextButton);
+  updateNextButton();
   scheduleImages();
 }
 

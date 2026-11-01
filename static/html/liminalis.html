@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css?v=20261101">
 </head>
 <body>
 <header>
@@ -20,7 +20,7 @@
             <button class="portfolio-toggle" type="button" aria-expanded="false" aria-controls="portfolio-menu">Portfolio</button>
             <ul class="portfolio-menu" id="portfolio-menu" hidden>
                 <li><a href="reportage.html">Reportage</a>
-                    <ul><li><span class="portfolio-unavailable">Liminalis <span class="portfolio-coming-soon">Coming soon</span></span></li></ul>
+                    <ul><li><a href="liminalis.html">Liminalis</a></li></ul>
                 </li>
                 <li><a href="personal-work.html">Personal Work</a>
                     <ul>
@@ -38,12 +38,55 @@
     <section id="liminalis" class="section active">
         <a class="back-to-projects" href="reportage.html"><span aria-hidden="true">←</span> Back to Reportage</a>
         <h2 class="section-title">liminalis</h2>
-        <div class="content">
-            <p>Coming soon.</p>
+        <div class="slider-wrap">
+            <button class="arrow left" type="button" aria-label="Previous image" onclick="scrollSlider('liminalis-slider', -1)">‹</button>
+            <div class="slider" id="liminalis-slider">
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_06.jpg" alt="A crowd gathers beneath a large Palestinian flag at a demonstration.">
+                    <div class="caption">A crowd gathers beneath a large Palestinian flag at a demonstration.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_27.jpg" alt="A line of students moves through the haze beneath apartment blocks.">
+                    <div class="caption">A line of students moves through the haze beneath apartment blocks.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_14.jpg" alt="From within the crowd, smoke and trees dissolve into the haze.">
+                    <div class="caption">From within the crowd, smoke and trees dissolve into the haze.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_19.jpg" alt="A banner crosses the foreground as demonstrators move through the city.">
+                    <div class="caption">A banner crosses the foreground as demonstrators move through the city.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_28.jpg" alt="A smoke grenade sends a plume over the march.">
+                    <div class="caption">A smoke grenade sends a plume over the march.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_17.jpg" alt="Demonstrators gather beneath the trees along a city street.">
+                    <div class="caption">Demonstrators gather beneath the trees along a city street.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_24.jpg" alt="The demonstration fills a narrow street between apartment blocks.">
+                    <div class="caption">The demonstration fills a narrow street between apartment blocks.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+                <div class="slide">
+                    <img data-src="../img/reportage/liminalis/2026-10-31%20Roll%2001_26.jpg" alt="People move through the intersection as smoke drifts across the street.">
+                    <div class="caption">People move through the intersection as smoke drifts across the street.</div>
+                    <div class="photo-meta">Milan, 30 October 2026</div>
+                </div>
+            </div>
+            <button class="arrow right" type="button" aria-label="Next image" onclick="scrollSlider('liminalis-slider', 1)">›</button>
         </div>
     </section>
 </main>
 <footer>© 2026 Edoardo Bartoccini</footer>
-<script src="../javascript/main.js"></script>
+    <script src="../javascript/main.js?v=20261101"></script>
 </body>
 </html>
