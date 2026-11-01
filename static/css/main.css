@@ -561,7 +561,7 @@ header {
 
                 /* constrain images so they never exceed the viewport height and avoid vertical scrolling */
                 .slide img {
-                    max-height: 70vh;
+                    max-height: max(100px, min(60vh, calc(100dvh - 390px)));
                     width: auto;
                     max-width: 100%;
                     display: block;
@@ -751,6 +751,58 @@ header {
             letter-spacing: .8px
         }
 
+        .project-page {
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+        }
+
+        .project-page main {
+            height: 100vh;
+            height: 100dvh;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 92px 24px 52px;
+        }
+
+        .project-page .section.active {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+            flex-direction: column;
+        }
+
+        .project-page .section-title {
+            flex: 0 0 auto;
+            margin-bottom: 22px;
+        }
+
+        .project-page .slider-wrap {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+            align-items: center;
+        }
+
+        .project-page .slider {
+            flex: 1;
+            height: 100%;
+            min-width: 0;
+            min-height: 0;
+            align-items: center;
+        }
+
+        .project-page footer {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 8px 24px;
+            background: #d4ccc0;
+        }
+
         @media (min-width:701px) and (max-width:800px) {
             .arrow.left {
                 left: 8px;
@@ -762,6 +814,11 @@ header {
         }
 
         @media(max-width:700px) {
+            .project-page {
+                display: flex;
+                flex-direction: column;
+            }
+
             header {
                 position: sticky;
                 flex-direction: column;
@@ -875,6 +932,27 @@ header {
 
             main {
                 padding: 32px 16px 52px;
+            }
+
+            .project-page main {
+                width: 100%;
+                height: auto;
+                flex: 1;
+                padding: 8px 16px;
+            }
+
+            .project-page .section-title {
+                margin-bottom: 12px;
+            }
+
+            .project-page .back-to-projects {
+                margin-bottom: 4px;
+            }
+
+            .project-page footer {
+                position: static;
+                flex: 0 0 auto;
+                padding: 8px 18px;
             }
 
             .section-title {
@@ -1021,7 +1099,7 @@ header {
             #intersections-slider .slide img,
             #liminalis-slider .slide img,
             .slider .slide img {
-                max-height: 52vh;
+                max-height: max(100px, min(52vh, calc(100dvh - 390px)));
             }
 
             .slide .caption {
