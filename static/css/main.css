@@ -1088,7 +1088,37 @@ header {
             }
 
             .project-page .slider-wrap {
-                padding: 0 36px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 36px minmax(0, 1fr);
+                align-items: stretch;
+                padding: 0;
+            }
+
+            .project-page .slider {
+                grid-column: 1 / -1;
+                grid-row: 2;
+            }
+
+            .project-page .arrow {
+                position: static;
+                top: auto;
+                transform: none;
+                align-self: center;
+            }
+
+            .project-page .arrow.left {
+                grid-column: 1;
+                grid-row: 1;
+                justify-self: start;
+                left: auto;
+            }
+
+            .project-page .arrow.right {
+                grid-column: 2;
+                grid-row: 1;
+                justify-self: end;
+                right: auto;
             }
 
             #the-moments-slider .slide,
@@ -1103,7 +1133,7 @@ header {
             #intersections-slider .slide img,
             #liminalis-slider .slide img,
             .slider .slide img {
-                max-height: max(100px, min(52vh, calc(100dvh - 390px)));
+                max-height: max(100px, min(58vh, calc(100dvh - 340px)));
             }
 
             .slide .caption {
