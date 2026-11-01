@@ -1087,6 +1087,10 @@ header {
                 gap: 16px;
             }
 
+            .project-page .slider-wrap {
+                padding: 0 36px;
+            }
+
             #the-moments-slider .slide,
             #intersections-slider .slide,
             #liminalis-slider .slide {
