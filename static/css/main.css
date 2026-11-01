@@ -803,6 +803,29 @@ header {
             background: #d4ccc0;
         }
 
+        @media (min-width: 701px) {
+            .project-page main {
+                padding: 76px 24px 20px;
+            }
+
+            .project-page .back-to-projects {
+                margin-bottom: 4px;
+            }
+
+            .project-page .section-title {
+                margin-bottom: 10px;
+            }
+
+            .project-page .slide {
+                gap: 12px;
+                padding: 10px 0;
+            }
+
+            .project-page .slider .slide img {
+                max-height: min(68vh, calc(100dvh - 258px));
+            }
+        }
+
         @media (min-width:701px) and (max-width:800px) {
             .arrow.left {
                 left: 8px;
