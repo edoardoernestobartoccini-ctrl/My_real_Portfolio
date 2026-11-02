@@ -537,6 +537,7 @@ header {
                 /* Show one image at a time in these galleries and keep it vertically bounded. */
                 #the-moments-slider,
                 #intersections-slider,
+                #cripped-slider,
                 #liminalis-slider {
                     gap: 0;
                     padding-bottom: 16px;
@@ -545,6 +546,7 @@ header {
 
                 #the-moments-slider .slide,
                 #intersections-slider .slide,
+                #cripped-slider .slide,
                 #liminalis-slider .slide {
                     flex: 0 0 100%;
                     width: 100%;
@@ -1146,6 +1148,7 @@ header {
 
             #the-moments-slider .slide,
             #intersections-slider .slide,
+            #cripped-slider .slide,
             #liminalis-slider .slide {
                 min-width: 100%;
                 padding: 12px 0;
@@ -1154,6 +1157,7 @@ header {
 
             #the-moments-slider .slide img,
             #intersections-slider .slide img,
+            #cripped-slider .slide img,
             #liminalis-slider .slide img,
             .slider .slide img {
                 max-height: max(100px, min(58vh, calc(100dvh - 340px)));
